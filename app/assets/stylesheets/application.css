@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+body{
+	padding: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
