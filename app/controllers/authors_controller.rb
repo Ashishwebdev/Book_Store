@@ -1,7 +1,7 @@
 class AuthorsController < ApplicationController
   def new
-  end
-
+    @page_title = 'Add New Category'
+    @category =Category.new
   def create
   end
 
