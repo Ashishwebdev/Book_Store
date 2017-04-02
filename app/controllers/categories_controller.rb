@@ -23,9 +23,13 @@ end
   end
 
   def index
+    @categories=Category.all
   end
 
   def show
+    @category = Category.find(params[:id])
+    @categories=Category.all
+    @books=@category.books
   end
   private
    def category_params

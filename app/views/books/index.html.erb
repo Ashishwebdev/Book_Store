@@ -3,7 +3,7 @@
 <div class="row">
   <% book.each do |book| %>
   <div class="col-md-3 col-sm-3">
-          <h3><%= book.title %>r</h3>
+          <h3><%= book.title %></h3>
           <%=image_tag(book.coverpath)%>
          <%= link_to 'Read more', book_path(book), class: "btn btn-primary"%>
           </div>
@@ -11,4 +11,4 @@
 </div>
 <% end %>
 
-
+</div>
