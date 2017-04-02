@@ -15,19 +15,27 @@ end
   end
 
   def update
-
+@author=Author.find(params[:id])
+@author.update(author_params)
+flash[:notice] = 'Author Updated'
+redirect_to authors_path
   end
 
   def edit
+    @author=Author.find(params[:id])
 
   end
 
   def destroy
+  @author=Author.find(params[:id])
+  @author.destroy
+flash[:notice] = 'Author Removed'
+redirect_to authors_path
 
   end
 
   def index
-
+ @authors = Author.all
   end
 
   def show
