@@ -1,7 +1,7 @@
 class AuthorsController < ApplicationController
   def new
     @page_title = 'Add New Category'
-    @category =Category.new
+    @author =Author.new
   def create
   end
 
@@ -19,4 +19,9 @@ class AuthorsController < ApplicationController
 
   def show
   end
+
+  def author_params
+   params.require(:author).permit(:first_name,:last_name)
+  end
+end
 end
